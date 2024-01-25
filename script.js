@@ -1,35 +1,14 @@
-class Person {
-    constructor(name, age) {
-        this._name = name;
-        this._age = age;
-    }
+// Create an instance of Person
+var person = new Person("John", 30);
 
-    get name() {
-        return this._name;
-    }
+// Call the greet method
+person.greet();  // Output: Hello, my name is John, I am 30 years old.
 
-    set age(value) {
-        this._age = value;
-    }
+// Create an instance of Employee
+var employee = new Employee("Jane", 25, "Web Developer");
 
-    get age() {
-        return this._age;
-    }
-}
+// Call the greet method inherited from Person
+employee.greet();  // Output: Hello, my name is Jane, I am 25 years old.
 
-class Student extends Person {
-    study() {
-        console.log(`${this.name} is studying.`);
-    }
-}
-
-class Teacher extends Person {
-    teach() {
-        console.log(`${this.name} is teaching.`);
-    }
-}
-
-// Do not change the code below this line
-window.Person = Person;
-window.Student = Student;
-window.Teacher = Teacher;
+// Call the jobGreet method specific to Employee
+employee.jobGreet();  // Output: Hello, my name is Jane, I am 25 years old, and my job title is Web Developer.
